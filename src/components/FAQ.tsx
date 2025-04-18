@@ -2,7 +2,7 @@ import Question from "./Question";
 
 export default function FAQ() {
   return (
-    <section className="bg-beige text-dark p-4">
+    <section id="faq" className="bg-beige text-dark p-4">
       <h2 className="text-4xl font-bold text-center mb-10">
         Frequently Asked Questions
       </h2>

@@ -1,10 +1,13 @@
 "use client";
 import React from "react";
-import { trackEvent } from "@/app/services/mixpanel";
+import { trackClick } from "@/helpers/track_click";
 
 const Hero = () => {
   return (
-    <div className="relative flex items-center justify-center h-[40vh] text-darkText">
+    <div
+      id="hero"
+      className="relative flex items-center justify-center h-[40vh] text-darkText"
+    >
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{ backgroundImage: "url('/hero.png')" }}
@@ -21,7 +24,7 @@ const Hero = () => {
             <a
               href="#pricing"
               className="bg-clay text-white rounded-full py-3 px-5 hover:bg-clay-muted transition-colors duration-200"
-              onClick={() => trackEvent("click")}
+              onClick={() => trackClick("Get Your Free Plan", "Hero Section")}
             >
               Get Your Free Plan
             </a>

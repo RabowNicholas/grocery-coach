@@ -8,11 +8,58 @@ import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import { trackEvent } from "./services/mixpanel";
+import { trackClick } from "@/helpers/track_click";
 
 export default function Home() {
   const pricingRef = useRef<HTMLDivElement | null>(null);
   const heroRef = useRef<HTMLDivElement | null>(null);
   const [showStickyCTA, setShowStickyCTA] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    trackEvent("page_viewed", {
+      utm_source: params.get("utm_source"),
+      utm_medium: params.get("utm_medium"),
+      utm_campaign: params.get("utm_campaign"),
+      referrer: document.referrer,
+    });
+  }, []);
+
+  useEffect(() => {
+    const sectionMap = [
+      { id: "hero", name: "Hero" },
+      { id: "how-it-works", name: "HowItWorks" },
+      { id: "what-you-get", name: "WhatYouGet" },
+      { id: "about-me", name: "AboutMe" },
+      { id: "testimonials", name: "Testimonials" },
+      { id: "pricing", name: "Pricing" },
+      { id: "faq", name: "FAQ" },
+    ];
+
+    const seen = new Set();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const section = sectionMap.find((s) => s.id === entry.target.id);
+            if (section && !seen.has(section.name)) {
+              seen.add(section.name);
+              trackEvent("section_viewed", { section_name: section.name });
+            }
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sectionMap.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -66,6 +113,7 @@ export default function Home() {
         <a
           href="#pricing"
           className="fixed bottom-0 left-0 right-0 z-50 bg-clay hover:bg-clay-muted text-white p-4 text-center shadow-md font-semibold"
+          onClick={() => trackClick("Get Your Free Plan", "Sticky")}
         >
           Get Your Free Plan
         </a>

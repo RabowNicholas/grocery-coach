@@ -20,7 +20,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="flex flex-wrap justify-center p-4">
+    <div id="testimonials" className="flex flex-wrap justify-center p-4">
       <div className="text-4xl font-bold p-4">
         A Few Words From People Who&apos;ve Tried It
       </div>

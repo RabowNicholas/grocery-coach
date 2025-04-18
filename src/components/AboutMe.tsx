@@ -1,8 +1,10 @@
+import { trackClick } from "@/helpers/track_click";
 import React from "react";
 
 const AboutMe = () => {
   return (
     <div
+      id="about-me"
       className="relative bg-cover bg-center"
       style={{ backgroundImage: "url('/me.jpg')" }}
     >
@@ -34,6 +36,7 @@ const AboutMe = () => {
         <a
           href="https://calendly.com/ndr-business-consulting/grocery-coach-1-1-w-nick"
           className="bg-sage text-darkText rounded-full py-3 px-5 hover:bg-sage-muted transition-colors duration-200"
+          onClick={() => trackClick("Book a Call", "AboutMe Section")}
         >
           Book a Call
         </a>

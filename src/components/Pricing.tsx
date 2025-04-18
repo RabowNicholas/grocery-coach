@@ -1,3 +1,4 @@
+import { trackClick } from "@/helpers/track_click";
 import React from "react";
 
 const Pricing = () => {
@@ -24,6 +25,7 @@ const Pricing = () => {
           <a
             href="https://buy.stripe.com/14kaIr8F115igvK6or"
             className="bg-clay text-white rounded-full py-3 px-5 hover:bg-clay-muted transition-colors duration-200 text-center"
+            onClick={() => trackClick("Start Free Trial", "Weekly Card")}
           >
             Start Free Trial
           </a>
@@ -46,6 +48,7 @@ const Pricing = () => {
           <a
             href="https://buy.stripe.com/dR6dUD08v7tGfrG3cg"
             className="bg-clay text-white rounded-full py-3 px-5 hover:bg-clay-muted transition-colors duration-200 text-center"
+            onClick={() => trackClick("Start Free Trial", "Monthly Card")}
           >
             Start Free Trial
           </a>
