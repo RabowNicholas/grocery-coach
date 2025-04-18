@@ -29,8 +29,8 @@ const HowItWorks: React.FC = () => {
               height={32}
             />
             <p className="text-muted">
-              You'll get your first plan with meals and a grocery list within a
-              day
+              You&apos;ll get your first plan with meals and a grocery list
+              within a day
             </p>
           </div>
           <div className="flex-1 flex items-start space-x-3">
@@ -41,8 +41,8 @@ const HowItWorks: React.FC = () => {
               height={32}
             />
             <p className="text-muted">
-              Each week's plan is brand new – improved based on what you liked
-              and what worked
+              Each week&apos;s plan is brand new – improved based on what you
+              liked and what worked
             </p>
           </div>
         </div>

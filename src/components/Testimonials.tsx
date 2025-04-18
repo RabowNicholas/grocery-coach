@@ -7,7 +7,7 @@ const testimonials = [
     name: "Abriana",
   },
   {
-    text: "It’s so helpful having the nutrition and serving sizes laid out — it makes meal prep for the whole week a no-brainer.",
+    text: "It&apos;s so helpful having the nutrition and serving sizes laid out — it makes meal prep for the whole week a no-brainer.",
     color: "bg-clay-muted",
     name: "Hannah",
   },
@@ -22,7 +22,7 @@ export default function Testimonials() {
   return (
     <div className="flex flex-wrap justify-center p-4">
       <div className="text-4xl font-bold p-4">
-        A Few Words From People Who've Tried It
+        A Few Words From People Who&apos;ve Tried It
       </div>
       {testimonials.map((testimonial, index) => (
         <TestimonialCard

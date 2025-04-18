@@ -17,7 +17,7 @@ export default function FAQ() {
         />
         <Question
           question="What if I don't like it?"
-          answer="You won’t be charged during your free trial. Cancel within 7 days and you won’t pay anything."
+          answer="You won't be charged during your free trial. Cancel within 7 days and you won't pay anything."
         />
         <Question
           question="Is it customized to my diet or goals?"
