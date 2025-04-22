@@ -81,7 +81,9 @@ export default function RiceBowlLandingPage() {
         href="https://buy.stripe.com/bIY2bVf3p7tGa7m005"
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackClick("Buy Rice Bowl Plan", "Hero CTA")}
+        onClick={() =>
+          trackClick("Get the Plan $6", "Rice Bowl Landing Bottom")
+        }
         className="inline-block bg-sage text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-sage-muted transition"
       >
         Get the Plan – $6
