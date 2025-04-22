@@ -3,7 +3,7 @@
 
 import "./globals.css";
 import { useEffect } from "react";
-import * as mixpanel from "@/app/services/mixpanel";
+import * as mixpanel from "@/services/mixpanel";
 
 export default function RootLayout({
   children,

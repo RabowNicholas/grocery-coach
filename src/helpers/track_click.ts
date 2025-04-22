@@ -1,4 +1,4 @@
-import { trackEvent } from "@/app/services/mixpanel";
+import { trackEvent } from "@/services/mixpanel";
 
 export const trackClick = (
   label: string,

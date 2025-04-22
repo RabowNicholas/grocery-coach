@@ -7,7 +7,7 @@ import AboutMe from "@/components/AboutMe";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
-import { trackEvent } from "./services/mixpanel";
+import { trackEvent } from "../services/mixpanel";
 import { trackClick } from "@/helpers/track_click";
 
 export default function Home() {
