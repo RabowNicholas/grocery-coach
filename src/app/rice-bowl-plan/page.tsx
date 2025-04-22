@@ -25,7 +25,7 @@ export default function RiceBowlLandingPage() {
       </p>
 
       <p className="text-gray-700 mb-6">
-        For less than the cost of a protein bar, you'll save hours of
+        For less than the cost of a protein bar, you&apos;ll save hours of
         decision-making and eat better all week.
       </p>
 
